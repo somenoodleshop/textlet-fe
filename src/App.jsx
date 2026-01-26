@@ -2,6 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 
 import './App.css'
 
+const { VITE_API_URL: API_URL = '' } = import.meta.env
+
 const App = () => {
   const query = useQuery({ queryKey: 'comments', queryFn: () => {} })
   return (

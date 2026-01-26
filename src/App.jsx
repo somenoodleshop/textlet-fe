@@ -12,6 +12,7 @@ const App = () => {
     <div>
       <h1 className='text-3xl font-bold underline'>Hello World</h1>
       { query.isLoading && <p>Loading...</p> }
+      { query.isError && <p>Error: { query.error.message }</p> }
     </div>
   )
 }

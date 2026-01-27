@@ -2,6 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 
 import './App.css'
 
+import Comments from './component/Comments'
+
 const { VITE_API_URL: API_URL = '' } = import.meta.env
 
 const get = url => fetch(url).then(response => !response.ok ? Promise.reject(response) : response.json())

@@ -11,6 +11,7 @@ const get = url => fetch(url).then(response => !response.ok ? Promise.reject(res
 
 const App = () => {
   const query = useQuery({ queryKey: 'comments', queryFn: () => get(`${API_URL}/comments`) })
+  const [comment, setComment] = useState('')
   return (
     <div className='min-h-screen p-8 bg-gray-50'>
       <h1 className='text-3xl font-bold underline mb-6'>Hello World</h1>

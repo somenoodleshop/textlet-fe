@@ -12,6 +12,7 @@ const post = (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(da
 
 const App = () => {
   const query = useQuery({ queryKey: 'comments', queryFn: () => get(`${API_URL}/comments`) })
+  const mutation = useMutation({ mutationFn: comment => post(`${API_URL}/comments`, comment) })
   const [comment, setComment] = useState('')
   return (
     <div className='min-h-screen p-8 bg-gray-50'>

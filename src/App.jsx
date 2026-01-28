@@ -13,6 +13,7 @@ const App = () => {
   return (
     <div className='min-h-screen p-8 bg-gray-50'>
       <h1 className='text-3xl font-bold underline mb-6'>Hello World</h1>
+      <Comments {...query} />
       { query.isLoading && (
         <div className='flex items-center gap-2 text-gray-600'>
           <div className='w-5 h-5 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin' />

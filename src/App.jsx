@@ -8,6 +8,7 @@ import Comments from './component/Comments'
 const { VITE_API_URL: API_URL = '' } = import.meta.env
 
 const get = url => fetch(url).then(response => !response.ok ? Promise.reject(response) : response.json())
+const post = (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(data) }).then(response => !response.ok ? Promise.reject(response) : response.json())
 
 const App = () => {
   const query = useQuery({ queryKey: 'comments', queryFn: () => get(`${API_URL}/comments`) })

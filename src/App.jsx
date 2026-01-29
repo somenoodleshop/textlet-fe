@@ -12,6 +12,8 @@ const post = (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(da
 
 const handleSubmit = props => e => {
   e.preventDefault()
+  props.mutate({ text: props.comment })
+  props.setComment('')
 }
 
 const App = () => {

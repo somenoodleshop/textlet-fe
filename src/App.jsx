@@ -11,7 +11,7 @@ const onSuccess = response =>
   !response.ok ? Promise.reject(response) : response.json()
 
 const get = url => fetch(url).then(onSuccess)
-const post = (url, data) => fetch(url, { method: 'POST', body: JSON.stringify(data) }).then(response => !response.ok ? Promise.reject(response) : response.json())
+const post = url => data => fetch(url, { method: 'POST', body: JSON.stringify(data) }).then(onSuccess)
 
 const handleSubmit = props => e => {
   e.preventDefault()

@@ -1,9 +1,9 @@
 const Comments = props => (
   <>
     { props.isError && (
-      <div className='p-4 bg-red-50 border border-red-200 rounded-lg'>
-        <p className='text-red-800 font-semibold'>Error</p>
-        <p className='text-red-600 mt-1'>{ props.error.message }</p>
+      <div className='p-4 bg-red-500/10 backdrop-blur-md border border-red-400/30 rounded-2xl'>
+        <p className='text-red-300 font-semibold'>Error</p>
+        <p className='text-red-200/80 mt-1'>{ props.error.message }</p>
       </div>
     ) }
     { props.isSuccess && (

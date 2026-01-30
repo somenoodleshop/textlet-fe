@@ -20,7 +20,7 @@ const handleSubmit = props => e => {
 }
 
 const App = () => {
-  const query = useQuery({ queryKey: ['comments'], queryFn: () => get(`${API_URL}/comments`) })
+  const query = useQuery({ queryKey: ['comments'], queryFn: () => get(`${API_URL}/comments`), retry: false })
   const mutation = useMutation({ mutationFn: comment => post(`${API_URL}/comments`, comment) })
   const [comment, setComment] = useState('')
   return (

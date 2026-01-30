@@ -28,7 +28,7 @@ const App = () => {
       <h1 className='text-3xl font-bold underline mb-6'>Hello World</h1>
       <Comments {...query} />
       <form onSubmit={handleSubmit({ comment, mutation, setComment })}>
-        <input type='text' value={comment} onChange={e => setComment(e.target.value)} />
+        <input type='text' placeholder='Comment' value={comment} onChange={e => setComment(e.target.value)} />
       </form>
     </div>
   )

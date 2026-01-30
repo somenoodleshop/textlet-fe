@@ -27,8 +27,14 @@ const App = () => {
     <div className='min-h-screen p-8'>
       <h1 className='text-3xl font-bold underline mb-6'>Hello World</h1>
       <Comments {...query} />
-      <form onSubmit={handleSubmit({ comment, mutation, setComment })}>
-        <input type='text' placeholder='Comment' value={comment} onChange={e => setComment(e.target.value)} />
+      <form onSubmit={handleSubmit({ comment, mutation, setComment })} className='mt-8'>
+        <input
+          type='text'
+          placeholder='Write a comment...'
+          value={comment}
+          onChange={e => setComment(e.target.value)}
+          className='w-full px-5 py-3 rounded bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/50 transition-all duration-300 focus:outline-none focus:bg-white/15 focus:border-white/40 focus:shadow-lg focus:shadow-white/5'
+        />
       </form>
     </div>
   )

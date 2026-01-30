@@ -9,8 +9,8 @@ const Comments = props => (
     { props.isSuccess && (
       <div className='space-y-3'>
         { props.data.map(comment => (
-          <div key={comment.id} className='p-4 bg-white rounded-lg shadow-sm border border-gray-200'>
-            <p className='text-gray-800'>{ comment.text }</p>
+          <div key={comment.id} className='p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl transition-all duration-300 hover:bg-white/15'>
+            <p className='text-white/90'>{ comment.text }</p>
           </div>
         )) }
       </div>

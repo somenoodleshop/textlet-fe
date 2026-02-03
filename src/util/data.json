@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "text": "This is a great feature! I've been waiting for something like this."
+  },
+  {
+    "id": 2,
+    "text": "Quick question - does this work with the latest version?"
+  },
+  {
+    "id": 3,
+    "text": "Thanks for sharing. Really helpful documentation."
+  },
+  {
+    "id": 4,
+    "text": "I found a small typo in the second paragraph, might want to fix that."
+  },
+  {
+    "id": 5,
+    "text": "Love the clean design. Looking forward to more updates!"
+  }
+]

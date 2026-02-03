@@ -3,6 +3,8 @@ import { useQuery, useMutation } from '@tanstack/react-query'
 
 import './App.css'
 
+import data from './util/data.json'
+
 import Comments from './component/Comments'
 
 const { VITE_API_URL: API_URL = '' } = import.meta.env

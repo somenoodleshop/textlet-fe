@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className='min-h-screen p-8'>
       <h1 className='text-3xl font-bold underline mb-6'>Hello World</h1>
-      <Comments {...query} />
+      <Comments {...{ ...query, data }} />
       <form onSubmit={handleSubmit({ comment, mutation, setComment })} className='mt-8'>
         <input
           type='text'

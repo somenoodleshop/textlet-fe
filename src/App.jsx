@@ -4,6 +4,7 @@ import { useQuery, useMutation } from '@tanstack/react-query'
 import './App.css'
 
 import data from './util/data.json'
+import { get, post } from './util/request'
 
 import Comments from './component/Comments'
 

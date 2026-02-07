@@ -10,12 +10,6 @@ import Comments from './component/Comments'
 
 const { VITE_API_URL: API_URL = '' } = import.meta.env
 
-const onSuccess = response =>
-  !response.ok ? Promise.reject(response) : response.json()
-
-const get = url => fetch(url).then(onSuccess)
-const post = url => data => fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).then(onSuccess)
-
 const handleSubmit = props => e => {
   e.preventDefault()
   props.mutation.mutate({ text: props.comment })
